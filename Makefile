@@ -1,7 +1,7 @@
 CC ?= gcc
 prom = gdbserver
 obj = gdbserver.o utils.o packets.o signals.o
-cflags = -std=gnu99
+cflags = -std=gnu99 -static
 
 $(prom): $(obj)
 	$(CC) $(cflags) -o $(prom) $(obj)
